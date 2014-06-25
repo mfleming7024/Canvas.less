@@ -1225,154 +1225,6 @@ nav.regular ul li a.active {
   color: #6d8082;
   background-color: #b1bdbd;
 }
-nav.green {
-  background: #2ecc71;
-  font: 16px "Myriad Pro";
-  position: relative;
-  overflow: hidden;
-}
-nav.green .hidden {
-  width: 100%;
-  height: 50px;
-  display: none;
-}
-nav.green .hidden a {
-  color: #1b7943;
-  float: right;
-  text-decoration: none;
-  width: 25px;
-  margin: 13px 13px 0 0;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  -ms-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-nav.green .hidden a span {
-  font-size: 26px;
-}
-nav.green .hidden a:hover {
-  color: #7ee2a8;
-}
-nav.green ul {
-  overflow: hidden;
-  list-style-type: none;
-  display: block;
-}
-nav.green ul li {
-  background: #2ecc71;
-  cursor: pointer;
-  border-left: 1px solid #54d98c;
-  float: left;
-  min-width: 92px;
-  height: 40px;
-  line-height: 46px;
-  text-align: center;
-}
-nav.green ul li:first-child {
-  border-left: none;
-}
-nav.green ul li.nav-right {
-  min-width: 92px;
-  height: 40px;
-  line-height: 46px;
-  text-align: center;
-  float: right;
-}
-nav.green ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  text-decoration: none;
-  color: white;
-}
-nav.green ul li a:hover {
-  color: #25a25a;
-  background-color: #40d47e;
-}
-nav.green ul li a.active {
-  color: #208e4e;
-  background-color: #54d98c;
-}
-nav.red {
-  background: #e74c3c;
-  font: 16px "Myriad Pro";
-  position: relative;
-  overflow: hidden;
-}
-nav.red .hidden {
-  width: 100%;
-  height: 50px;
-  display: none;
-}
-nav.red .hidden a {
-  color: #a82315;
-  float: right;
-  text-decoration: none;
-  width: 25px;
-  margin: 13px 13px 0 0;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  -ms-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-nav.red .hidden a span {
-  font-size: 26px;
-}
-nav.red .hidden a:hover {
-  color: #f29f97;
-}
-nav.red ul {
-  overflow: hidden;
-  list-style-type: none;
-  display: block;
-}
-nav.red ul li {
-  background: #e74c3c;
-  cursor: pointer;
-  border-left: 1px solid #ed7669;
-  float: left;
-  min-width: 92px;
-  height: 40px;
-  line-height: 46px;
-  text-align: center;
-}
-nav.red ul li:first-child {
-  border-left: none;
-}
-nav.red ul li.nav-right {
-  min-width: 92px;
-  height: 40px;
-  line-height: 46px;
-  text-align: center;
-  float: right;
-}
-nav.red ul li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  text-decoration: none;
-  color: white;
-}
-nav.red ul li a:hover {
-  color: #d62c1a;
-  background-color: #ea6153;
-}
-nav.red ul li a.active {
-  color: #bf2718;
-  background-color: #ed7669;
-}
 nav.off-canvas {
   background: #95a5a6;
   font: 16px "Myriad Pro";
@@ -1384,7 +1236,6 @@ nav.off-canvas .hidden {
   display: none;
 }
 nav.off-canvas .hidden a {
-  color: #617374;
   color: white;
   float: left;
   text-decoration: none;
@@ -1441,13 +1292,8 @@ nav.off-canvas ul li a {
   text-decoration: none;
   color: white;
 }
-nav.off-canvas ul li a:hover {
-  color: #798d8f;
-  background-color: #a3b1b2;
-}
 nav.off-canvas ul li a.active {
-  color: #6d8082;
-  background-color: #b1bdbd;
+  color: #566566;
 }
 /* #Above 
 ================================================== */
@@ -1511,7 +1357,7 @@ nav.off-canvas ul li a.active {
   }
   nav.off-canvas ul li {
     box-sizing: border-box;
-    margin-left: 10px;
+    padding-left: 5px;
     border-left: none;
     border-bottom: 1px solid #7f8c8d;
     text-align: left;
@@ -1524,16 +1370,6 @@ nav.off-canvas ul li a.active {
   }
   nav.off-canvas ul li.nav-right {
     text-align: left;
-  }
-  nav.off-canvas ul li a {
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-  }
-  nav.off-canvas ul li a:hover {
-    background-color: inherit;
   }
 }
 /* #Mobile (Landscape)
@@ -5832,8 +5668,7 @@ nav {
   box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.43);
 }
 canvas {
-  margin-top: 10px;
   width: 100%;
   height: 600px;
-  border: 1px solid black;
+  border-top: 5px solid black;
 }
