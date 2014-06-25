@@ -5,51 +5,43 @@
 @import "flatui/color.less";
 @import "flatui/mixin.less";
 @import "flatui/form.less";
-//@import "flatui/nav.less";
+@import "flatui/nav.less";
 @import "flatui/font.less";
 
 
 /* #Import a font
 ================================================== */
-//.font-face("Mohave", "fonts/Mohave.otf");
+.font-face("Mohave", "fonts/Mohave.otf");
+
 
 /* #Regular Code
 ================================================== */
-body {
-    h1 {
-        font: 36px "Corbel";
-        margin-top: 5px;
-    }   
-} 
-
-div#title {
-    margin-bottom: 10px;
-    h1 {
-        font-size: 56px;
-        text-align: center;
-        font-family: "Corbel";
-    }
-    hr {
-        height: 2px;
-        background-color: @silver;
-    }
+#header {
+	margin-top: 0;
 }
 
 .color-box {
     &:nth-child(1){
         background-color: black;
     }
+	font-family: Mohave;
     cursor: pointer;
-    .size(100%, 45px);
+    .size(100%/7, 45px);
+	float: left;
     line-height: 45px;
     text-align: center;
     color: white;
+	margin-top: 10px;
+}
+
+nav {
+	-webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.43);
+	-moz-box-shadow:    0px 5px 3px 0px rgba(0, 0, 0, 0.43);
+	box-shadow:         0px 5px 3px 0px rgba(0, 0, 0, 0.43);
 }
 
 canvas {
     margin-top: 10px;
     .size(100%, 600px);
     border: 1px solid black;
-    .border-radius(10px);
-	.transition("border-color", 2s);
 }

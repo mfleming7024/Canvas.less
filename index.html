@@ -7,29 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
     <script src="js/less-1.6.1.min.js"></script>
 </head>
-<body class="container" id="body-content">
-    <div class="row" id="title">
-        <h1 class="twelve columns">Canvas.less</h1>
-        <p class="twelve columns">Responsive painting application that works on desktop and mobile.</p>
-    </div>
-    <div class="row">
-        <h1 class="twelve columns">The App</h1>
-        <hr class="twelve columns" />
-    </div>
-    <div class="row">
-        <div class="five columns">
-            <button class="success" id="paintbrush-button">Paintbrush</button>
-            <button class="error" id="eraserbrush-button">Eraser</button>
-            <button class="caution" id="confettibrush-button">Confetti</button>
-        </div>
-        <div class="seven columns">
-            <div class="one column color-box alpha" data-hex="#000000">Black</div>
-            <div class="one column bg-red color-box" data-hex="#FF0000">Red</div>
-            <div class="one column bg-orange color-box" data-hex="#FF9900">Orange</div>
-            <div class="one column bg-yellow color-box" data-hex="#FFFF00">Yellow</div>
-            <div class="one column bg-green color-box" data-hex="#00FF00">Green</div>
-            <div class="one column bg-blue color-box" data-hex="#0000FF">Blue</div>
-            <div class="one column bg-purple color-box omega" data-hex="#990099">Purple</div>
+<body class="container">
+    <div class="row" id="header">
+		<div class="twelve columns">
+			<nav class="off-canvas" id="off-canvas-nav">
+				<div class="hidden">
+					<a href="#menu-content"><span class="icon-menu2">Canvas.less</span></a>
+				</div>
+				<ul id="menu-content">
+					<li><a href="#off-canvas-nav"><span class="icon-exit">Exit</span></a></li>
+					<li><a href="#" class="active"><span class="icon-paint-format"></span>Paintbrush</a></li>
+					<li><a href="#"><span class="icon-eraser"></span>Eraser</a></li>
+					<li><a href="#"><span class="icon-star"></span>Confetti</a></li>
+				</ul>
+			</nav>
+		</div>
+        <div class="twelve columns">
+            <div class="color-box" data-hex="#000000">Black</div>
+            <div class="bg-red color-box" data-hex="#FF0000">Red</div>
+            <div class="bg-orange color-box" data-hex="#FF9900">Orange</div>
+            <div class="bg-yellow color-box" data-hex="#FFFF00">Yellow</div>
+            <div class="bg-green color-box" data-hex="#00FF00">Green</div>
+            <div class="bg-blue color-box" data-hex="#0000FF">Blue</div>
+            <div class="bg-purple color-box" data-hex="#990099">Purple</div>
         </div>
         <canvas id="paint-area" class="twelve columns">
             <p>Your browser does not support canvas! Please use a relevant browser.</p>

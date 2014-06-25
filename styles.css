@@ -273,7 +273,6 @@ a img {
 }
 /* #Extras
 ================================================== */
-<<<<<<< HEAD
 hr.twelve.columns {
   height: 2px;
   background-color: #bdc3c7;
@@ -290,12 +289,6 @@ hr.twelve.columns {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-=======
-hr {
-  height: 2px;
-  margin: 5px 0;
-  background-color: gray;
->>>>>>> FETCH_HEAD
 }
 .disabled {
   pointer-events: none;
@@ -570,7 +563,6 @@ or wrap each row of columns in a <div class="row"> */
 ================================================== */
 /* Note: Design for a width of 480px */
 /*Flat Colors*/
-<<<<<<< HEAD
 .bg-red {
   background-color: #e74c3c;
 }
@@ -648,44 +640,14 @@ input.regular {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-=======
-/* #Basic Size
-================================================== */
-/* #Gradients
-================================================== */
-/* #Border Radius
-================================================== */
-/* #Box Shadow
-================================================== */
-/* #Box Sizing
-================================================== */
-/* #Animations
-================================================== */
-/* #Font Loading
-================================================== */
-/* #Buttons
-================================================== */
-/* #Input Fields
-================================================== */
-/* #Radio Buttons
-================================================== */
-/* #Checkbox
-================================================== */
-/* #Number Inputs (currently testing)
-================================================== */
-input.regular {
-  border: 1px solid #a7b0b1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #9aa4a5;
-  font: 15px "Myriad Pro";
+  font: 16px "Myriad Pro";
   line-height: 1.867;
-  padding: 14px 12px;
-  height: 33px;
+  padding: 5px 12px 0;
+  height: 32px;
   -webkit-appearance: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -708,10 +670,10 @@ input.error {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #ed7669;
-  font: 15px "Myriad Pro";
+  font: 16px "Myriad Pro";
   line-height: 1.867;
-  padding: 14px 12px;
-  height: 33px;
+  padding: 5px 12px 0;
+  height: 32px;
   -webkit-appearance: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -734,74 +696,6 @@ input.success {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   color: #54d98c;
-  font: 15px "Myriad Pro";
-  line-height: 1.867;
-  padding: 14px 12px;
-  height: 33px;
-  -webkit-appearance: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-input.success:focus {
-  border: 1px solid #93e7b6;
-  color: #25a25a;
-}
-div.number_input input[type=number] {
-  border: 2px solid #2c3e50;
-  color: white;
-  font-size: 16px;
-  padding-left: 5px;
-  background: #476481;
-  width: 75px;
-  height: 30px;
-}
-div.number_input input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-  cursor: pointer;
-  display: block;
-  width: 10px;
-  position: relative;
-}
-div.number_input input[type=number]::-webkit-inner-spin-button:before {
-  content: url("flatui/images/upArrow.png");
-  position: absolute;
-  right: 0;
-}
-div.number_input input[type=number]::-webkit-inner-spin-button:after {
-  content: url("flatui/images/downArrow.png");
-  position: absolute;
-  right: 0;
-}
-div.number_input input[type=number]::-webkit-inner-spin-button:before {
-  top: 10px;
-}
-div.number_input input[type=number]::-webkit-inner-spin-button:after {
-  top: -5px;
-}
-button.tiny_reg {
-  cursor: pointer;
-  border: 0;
-  background-color: #2ecc71;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
->>>>>>> FETCH_HEAD
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  color: #9aa4a5;
   font: 16px "Myriad Pro";
   line-height: 1.867;
   padding: 5px 12px 0;
@@ -815,94 +709,6 @@ button.tiny_reg {
   -ms-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-<<<<<<< HEAD
-input.regular:focus {
-  border: 1px solid #c2c9c9;
-  color: #667273;
-}
-input.error {
-  border: 1px solid #ef8b80;
-=======
-button.tiny_reg:hover {
-  background-color: #54d98c;
-}
-button.small_reg {
-  cursor: pointer;
-  border: 0;
-  background-color: #2ecc71;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
->>>>>>> FETCH_HEAD
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  color: #ed7669;
-  font: 16px "Myriad Pro";
-  line-height: 1.867;
-  padding: 5px 12px 0;
-  height: 32px;
-  -webkit-appearance: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-<<<<<<< HEAD
-input.error:focus {
-  border: 1px solid #f5b4ae;
-  color: #d62c1a;
-}
-input.success {
-  border: 1px solid #69dd9a;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-=======
-button.small_reg:hover {
-  background-color: #54d98c;
-}
-button.medium_reg {
-  cursor: pointer;
-  border: 0;
-  background-color: #2ecc71;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
->>>>>>> FETCH_HEAD
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  color: #54d98c;
-  font: 16px "Myriad Pro";
-  line-height: 1.867;
-  padding: 5px 12px 0;
-  height: 32px;
-  -webkit-appearance: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-<<<<<<< HEAD
 input.success:focus {
   border: 1px solid #93e7b6;
   color: #25a25a;
@@ -941,12 +747,6 @@ div.number_input input[type=number]::-webkit-inner-spin-button:after {
   top: -5px;
 }
 button.success {
-=======
-button.medium_reg:hover {
-  background-color: #54d98c;
-}
-button.large_reg {
->>>>>>> FETCH_HEAD
   cursor: pointer;
   border: 0;
   min-width: 90px;
@@ -961,7 +761,6 @@ button.large_reg {
   font-size: 17px;
   line-height: 1.471;
 }
-<<<<<<< HEAD
 button.success:hover {
   background-color: #54d98c;
 }
@@ -969,14 +768,6 @@ button.error {
   cursor: pointer;
   border: 0;
   min-width: 90px;
-=======
-button.large_reg:hover {
-  background-color: #54d98c;
-}
-button.tiny_err {
-  cursor: pointer;
-  border: 0;
->>>>>>> FETCH_HEAD
   background-color: #e74c3c;
   color: #ffffff;
   -webkit-transition: all 0.3s linear;
@@ -988,7 +779,6 @@ button.tiny_err {
   font-size: 17px;
   line-height: 1.471;
 }
-<<<<<<< HEAD
 button.error:hover {
   background-color: #ed7669;
 }
@@ -997,15 +787,6 @@ button.attention {
   border: 0;
   min-width: 90px;
   background-color: #f1c40f;
-=======
-button.tiny_err:hover {
-  background-color: #ed7669;
-}
-button.small_err {
-  cursor: pointer;
-  border: 0;
-  background-color: #e74c3c;
->>>>>>> FETCH_HEAD
   color: #ffffff;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1016,7 +797,6 @@ button.small_err {
   font-size: 17px;
   line-height: 1.471;
 }
-<<<<<<< HEAD
 button.attention:hover {
   background-color: #f4d03f;
 }
@@ -1025,15 +805,6 @@ button.caution {
   border: 0;
   min-width: 90px;
   background-color: #3498db;
-=======
-button.small_err:hover {
-  background-color: #ed7669;
-}
-button.medium_err {
-  cursor: pointer;
-  border: 0;
-  background-color: #e74c3c;
->>>>>>> FETCH_HEAD
   color: #ffffff;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1044,7 +815,6 @@ button.medium_err {
   font-size: 17px;
   line-height: 1.471;
 }
-<<<<<<< HEAD
 button.caution:hover {
   background-color: #5faee3;
 }
@@ -1065,31 +835,12 @@ div.radio-button-blue input {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
-=======
-button.medium_err:hover {
-  background-color: #ed7669;
-}
-button.large_err {
-  cursor: pointer;
-  border: 0;
-  background-color: #e74c3c;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
->>>>>>> FETCH_HEAD
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 2px solid #3498db;
   background-color: #5faee3;
 }
-<<<<<<< HEAD
 div.radio-button-blue input:before {
   content: url("flatui/images/radio.png");
   visibility: hidden;
@@ -1111,146 +862,6 @@ div.radio-button-red label {
   margin: 3px 7px 3px 0;
 }
 div.radio-button-red input {
-=======
-button.large_err:hover {
-  background-color: #ed7669;
-}
-button.tiny_att {
-  cursor: pointer;
-  border: 0;
-  background-color: #f1c40f;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 6px;
-  font-size: 12px;
-  line-height: 1.083;
-}
-button.tiny_att:hover {
-  background-color: #f4d03f;
-}
-button.small_att {
-  cursor: pointer;
-  border: 0;
-  background-color: #f1c40f;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 9px;
-  font-size: 13px;
-  line-height: 1.385;
-}
-button.small_att:hover {
-  background-color: #f4d03f;
-}
-button.medium_att {
-  cursor: pointer;
-  border: 0;
-  background-color: #f1c40f;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 10px;
-  font-size: 17px;
-  line-height: 1.471;
-}
-button.medium_att:hover {
-  background-color: #f4d03f;
-}
-button.large_att {
-  cursor: pointer;
-  border: 0;
-  background-color: #f1c40f;
-  color: #ffffff;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 13px;
-  font-size: 22px;
-  line-height: 1.227;
-}
-button.large_att:hover {
-  background-color: #f4d03f;
-}
-div.radio_button_blue label {
-  float: left;
-  text-align: right;
-  width: 90px;
-  margin: 3px 7px 3px 0;
-}
-div.radio_button_blue input {
-  margin-top: 3px;
-  -webkit-appearance: none;
-  cursor: pointer;
-  float: left;
-  width: 22px;
-  height: 22px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  border: 3px solid #3498db;
-  background-color: #5faee3;
-}
-div.radio_button_blue input:before {
-  content: url("flatui/images/radio.png");
-  visibility: hidden;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  opacity: 0;
-}
-div.radio_button_blue input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.radio_button_red label {
-  float: left;
-  text-align: right;
-  width: 90px;
-  margin: 3px 7px 3px 0;
-}
-div.radio_button_red input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1267,11 +878,7 @@ div.radio_button_red input {
   border: 2px solid #e74c3c;
   background-color: #ed7669;
 }
-<<<<<<< HEAD
 div.radio-button-red input:before {
-=======
-div.radio_button_red input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/radio.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1281,7 +888,6 @@ div.radio_button_red input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.radio-button-red input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1293,19 +899,6 @@ div.radio-button-green label {
   margin: 3px 7px 3px 0;
 }
 div.radio-button-green input {
-=======
-div.radio_button_red input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.radio_button_green label {
-  float: left;
-  text-align: right;
-  width: 90px;
-  margin: 3px 7px 3px 0;
-}
-div.radio_button_green input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1322,11 +915,7 @@ div.radio_button_green input {
   border: 2px solid #2ecc71;
   background-color: #54d98c;
 }
-<<<<<<< HEAD
 div.radio-button-green input:before {
-=======
-div.radio_button_green input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/radio.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1336,7 +925,6 @@ div.radio_button_green input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.radio-button-green input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1348,20 +936,6 @@ div.checkbox-blue label {
   margin: 3px 7px 3px 0;
 }
 div.checkbox-blue input {
-=======
-div.radio_button_green input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.checkbox_blue {
-  cursor: pointer;
-}
-div.checkbox_blue label {
-  float: left;
-  margin: 3px 7px 3px 0;
-}
-div.checkbox_blue input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1378,11 +952,7 @@ div.checkbox_blue input {
   background-color: #75b9e7;
   border: 2px solid #3498db;
 }
-<<<<<<< HEAD
 div.checkbox-blue input:before {
-=======
-div.checkbox_blue input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/checkmark.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1392,7 +962,6 @@ div.checkbox_blue input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.checkbox-blue input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1404,20 +973,6 @@ div.checkbox-red label {
   margin: 3px 7px 3px 0;
 }
 div.checkbox-red input {
-=======
-div.checkbox_blue input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.checkbox_red {
-  cursor: pointer;
-}
-div.checkbox_red label {
-  float: left;
-  margin: 3px 7px 3px 0;
-}
-div.checkbox_red input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1434,11 +989,7 @@ div.checkbox_red input {
   background-color: #ef8b80;
   border: 2px solid #e74c3c;
 }
-<<<<<<< HEAD
 div.checkbox-red input:before {
-=======
-div.checkbox_red input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/checkmark.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1448,7 +999,6 @@ div.checkbox_red input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.checkbox-red input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1460,20 +1010,6 @@ div.checkbox-green label {
   margin: 3px 7px 3px 0;
 }
 div.checkbox-green input {
-=======
-div.checkbox_red input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.checkbox_green {
-  cursor: pointer;
-}
-div.checkbox_green label {
-  float: left;
-  margin: 3px 7px 3px 0;
-}
-div.checkbox_green input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1490,11 +1026,7 @@ div.checkbox_green input {
   background-color: #69dd9a;
   border: 2px solid #2ecc71;
 }
-<<<<<<< HEAD
 div.checkbox-green input:before {
-=======
-div.checkbox_green input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/checkmark.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1504,7 +1036,6 @@ div.checkbox_green input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.checkbox-green input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1516,20 +1047,6 @@ div.checkbox-yellow label {
   margin: 3px 7px 3px 0;
 }
 div.checkbox-yellow input {
-=======
-div.checkbox_green input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.checkbox_yellow {
-  cursor: pointer;
-}
-div.checkbox_yellow label {
-  float: left;
-  margin: 3px 7px 3px 0;
-}
-div.checkbox_yellow input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1546,11 +1063,7 @@ div.checkbox_yellow input {
   background-color: #f5d657;
   border: 2px solid #f1c40f;
 }
-<<<<<<< HEAD
 div.checkbox-yellow input:before {
-=======
-div.checkbox_yellow input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/checkmark.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1560,7 +1073,6 @@ div.checkbox_yellow input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.checkbox-yellow input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1572,20 +1084,6 @@ div.checkbox-orange label {
   margin: 3px 7px 3px 0;
 }
 div.checkbox-orange input {
-=======
-div.checkbox_yellow input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.checkbox_orange {
-  cursor: pointer;
-}
-div.checkbox_orange label {
-  float: left;
-  margin: 3px 7px 3px 0;
-}
-div.checkbox_orange input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1602,11 +1100,7 @@ div.checkbox_orange input {
   background-color: #eea667;
   border: 2px solid #e67e22;
 }
-<<<<<<< HEAD
 div.checkbox-orange input:before {
-=======
-div.checkbox_orange input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/checkmark.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1616,7 +1110,6 @@ div.checkbox_orange input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.checkbox-orange input:checked:before {
   visibility: visible;
   opacity: 1;
@@ -1628,20 +1121,6 @@ div.checkbox-purple label {
   margin: 3px 7px 3px 0;
 }
 div.checkbox-purple input {
-=======
-div.checkbox_orange input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-div.checkbox_purple {
-  cursor: pointer;
-}
-div.checkbox_purple label {
-  float: left;
-  margin: 3px 7px 3px 0;
-}
-div.checkbox_purple input {
->>>>>>> FETCH_HEAD
   margin-top: 3px;
   -webkit-appearance: none;
   cursor: pointer;
@@ -1658,11 +1137,7 @@ div.checkbox_purple input {
   background-color: #bb8ecd;
   border: 2px solid #9b59b6;
 }
-<<<<<<< HEAD
 div.checkbox-purple input:before {
-=======
-div.checkbox_purple input:before {
->>>>>>> FETCH_HEAD
   content: url("flatui/images/checkmark.png");
   visibility: hidden;
   -webkit-transition: all 0.2s linear;
@@ -1672,10 +1147,420 @@ div.checkbox_purple input:before {
   transition: all 0.2s linear;
   opacity: 0;
 }
-<<<<<<< HEAD
 div.checkbox-purple input:checked:before {
   visibility: visible;
   opacity: 1;
+}
+nav.regular {
+  background: #95a5a6;
+  font: 16px "Myriad Pro";
+  position: relative;
+  overflow: hidden;
+}
+nav.regular .hidden {
+  width: 100%;
+  height: 50px;
+  display: none;
+}
+nav.regular .hidden a {
+  color: #617374;
+  float: right;
+  text-decoration: none;
+  width: 25px;
+  margin: 13px 13px 0 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+nav.regular .hidden a span {
+  font-size: 26px;
+}
+nav.regular .hidden a:hover {
+  color: #ccd4d5;
+}
+nav.regular ul {
+  overflow: hidden;
+  list-style-type: none;
+  display: block;
+}
+nav.regular ul li {
+  background: #95a5a6;
+  cursor: pointer;
+  border-left: 1px solid #b1bdbd;
+  float: left;
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+}
+nav.regular ul li:first-child {
+  border-left: none;
+}
+nav.regular ul li.nav-right {
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+  float: right;
+}
+nav.regular ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: white;
+}
+nav.regular ul li a:hover {
+  color: #798d8f;
+  background-color: #a3b1b2;
+}
+nav.regular ul li a.active {
+  color: #6d8082;
+  background-color: #b1bdbd;
+}
+nav.green {
+  background: #2ecc71;
+  font: 16px "Myriad Pro";
+  position: relative;
+  overflow: hidden;
+}
+nav.green .hidden {
+  width: 100%;
+  height: 50px;
+  display: none;
+}
+nav.green .hidden a {
+  color: #1b7943;
+  float: right;
+  text-decoration: none;
+  width: 25px;
+  margin: 13px 13px 0 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+nav.green .hidden a span {
+  font-size: 26px;
+}
+nav.green .hidden a:hover {
+  color: #7ee2a8;
+}
+nav.green ul {
+  overflow: hidden;
+  list-style-type: none;
+  display: block;
+}
+nav.green ul li {
+  background: #2ecc71;
+  cursor: pointer;
+  border-left: 1px solid #54d98c;
+  float: left;
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+}
+nav.green ul li:first-child {
+  border-left: none;
+}
+nav.green ul li.nav-right {
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+  float: right;
+}
+nav.green ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: white;
+}
+nav.green ul li a:hover {
+  color: #25a25a;
+  background-color: #40d47e;
+}
+nav.green ul li a.active {
+  color: #208e4e;
+  background-color: #54d98c;
+}
+nav.red {
+  background: #e74c3c;
+  font: 16px "Myriad Pro";
+  position: relative;
+  overflow: hidden;
+}
+nav.red .hidden {
+  width: 100%;
+  height: 50px;
+  display: none;
+}
+nav.red .hidden a {
+  color: #a82315;
+  float: right;
+  text-decoration: none;
+  width: 25px;
+  margin: 13px 13px 0 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+nav.red .hidden a span {
+  font-size: 26px;
+}
+nav.red .hidden a:hover {
+  color: #f29f97;
+}
+nav.red ul {
+  overflow: hidden;
+  list-style-type: none;
+  display: block;
+}
+nav.red ul li {
+  background: #e74c3c;
+  cursor: pointer;
+  border-left: 1px solid #ed7669;
+  float: left;
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+}
+nav.red ul li:first-child {
+  border-left: none;
+}
+nav.red ul li.nav-right {
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+  float: right;
+}
+nav.red ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: white;
+}
+nav.red ul li a:hover {
+  color: #d62c1a;
+  background-color: #ea6153;
+}
+nav.red ul li a.active {
+  color: #bf2718;
+  background-color: #ed7669;
+}
+nav.off-canvas {
+  background: #95a5a6;
+  font: 16px "Myriad Pro";
+  overflow: hidden;
+}
+nav.off-canvas .hidden {
+  width: 100%;
+  height: 50px;
+  display: none;
+}
+nav.off-canvas .hidden a {
+  color: #617374;
+  color: white;
+  float: left;
+  text-decoration: none;
+  width: 25px;
+  margin: 13px 13px 0 0;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+nav.off-canvas .hidden a span {
+  font-size: 26px;
+}
+nav.off-canvas .hidden a:hover {
+  color: #ccd4d5;
+}
+nav.off-canvas ul {
+  overflow: hidden;
+  list-style-type: none;
+  display: block;
+  background-color: #95a5a6;
+}
+nav.off-canvas ul li {
+  background: #95a5a6;
+  cursor: pointer;
+  border-left: 1px solid #b1bdbd;
+  float: left;
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+}
+nav.off-canvas ul li:first-child {
+  border-left: none;
+  display: none;
+}
+nav.off-canvas ul li.nav-right {
+  min-width: 92px;
+  height: 40px;
+  line-height: 46px;
+  text-align: center;
+  float: right;
+}
+nav.off-canvas ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  color: white;
+}
+nav.off-canvas ul li a:hover {
+  color: #798d8f;
+  background-color: #a3b1b2;
+}
+nav.off-canvas ul li a.active {
+  color: #6d8082;
+  background-color: #b1bdbd;
+}
+/* #Above 
+================================================== */
+/* Note: Design for a width above 959px */
+@media only screen and (min-width: 959px) {
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.off-canvas ul {
+    display: block !important;
+  }
+}
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.off-canvas ul {
+    display: block !important;
+  }
+}
+/* #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+  nav.responsive {
+    overflow: visible;
+  }
+  nav.responsive .hidden {
+    display: block;
+  }
+  nav.responsive ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+  }
+  nav.responsive ul li {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  nav.off-canvas .hidden {
+    display: block;
+  }
+  nav.off-canvas ul {
+    position: fixed;
+    width: 45%;
+    height: 100%;
+    left: -45%;
+    top: 0;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  nav.off-canvas ul:target {
+    left: 0px;
+  }
+  nav.off-canvas ul li {
+    box-sizing: border-box;
+    margin-left: 10px;
+    border-left: none;
+    border-bottom: 1px solid #7f8c8d;
+    text-align: left;
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  nav.off-canvas ul li:first-child {
+    display: block;
+  }
+  nav.off-canvas ul li.nav-right {
+    text-align: left;
+  }
+  nav.off-canvas ul li a {
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+  }
+  nav.off-canvas ul li a:hover {
+    background-color: inherit;
+  }
+}
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .rounded {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+}
+/* #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 479px) {
+  nav.responsive.rounded {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
 }
 @font-face {
   font-family: 'icomoon';
@@ -5918,181 +5803,37 @@ span:before {
 }
 /* #Import a font
 ================================================== */
+@font-face {
+  font-family: '"Mohave"';
+  src: url('fonts/Mohave.otf.eot?#') format('eot'), url('fonts/Mohave.otf.woff') format('woff'), url('fonts/Mohave.otf.ttf') format('truetype');
+}
 /* #Regular Code
 ================================================== */
-body h1 {
-  font: 36px "Corbel";
-  margin-top: 5px;
-}
-div#title {
-  margin-bottom: 10px;
-}
-div#title h1 {
-  font-size: 56px;
-  text-align: center;
-  font-family: "Corbel";
-}
-div#title p {
-  font-family: "Corbel";
-  color: #bdc3c7;
-  font-size: 24px;
-  text-align: center;
+#header {
+  margin-top: 0;
 }
 .color-box {
+  font-family: Mohave;
   cursor: pointer;
-  width: 100%;
+  width: 14.28571429%;
   height: 45px;
+  float: left;
   line-height: 45px;
   text-align: center;
   color: white;
+  margin-top: 10px;
 }
 .color-box:nth-child(1) {
   background-color: black;
+}
+nav {
+  -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.43);
 }
 canvas {
   margin-top: 10px;
   width: 100%;
   height: 600px;
   border: 1px solid black;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-transition: "border-color" 2s linear;
-  -moz-transition: "border-color" 2s linear;
-  -o-transition: "border-color" 2s linear;
-  -ms-transition: "border-color" 2s linear;
-  transition: "border-color" 2s linear;
-=======
-div.checkbox_purple input:checked:before {
-  visibility: visible;
-  opacity: 1;
-}
-/* #Import a font
-================================================== */
-/* #Regular Code
-================================================== */
-body {
-  opacity: 0;
-}
-div#title {
-  margin-bottom: 10px;
-}
-div#title h1 {
-  font-size: 56px;
-  text-align: center;
-  font-family: "Corbel";
-}
-div#title hr {
-  height: 2px;
-  background-color: #bdc3c7;
-}
-div#title p {
-  font-family: "Corbel";
-  color: #bdc3c7;
-  font-size: 24px;
-  text-align: center;
-}
-h1 {
-  font: 36px "Corbel";
-  margin-top: 5px;
-}
-h2 {
-  color: white;
-  padding-top: 10px;
-  text-align: center;
-}
-#grid_system div.column,
-#grid_system div.columns {
-  position: relative;
-  background-color: #c0392b;
-  height: 40px;
-}
-#grid_system h2,
-#grid_system h3 {
-  padding: 0;
-  width: 100%;
-  display: block;
-  text-align: center;
-  top: 8px;
-  position: absolute;
-}
-#grid_system h2 {
-  opacity: 1;
-  color: white;
-  font-family: "Corbel";
-}
-#grid_system h3 {
-  right: 20px;
-  opacity: 0;
-  color: white;
-}
-#buttons_forms input[type="text"] {
-  margin-bottom: 3px;
-}
-#colors div div div div {
-  height: 35px;
-}
-#colors #alizarin {
-  background-color: #e74c3c;
-}
-#colors #pomegranate {
-  background-color: #c0392b;
-}
-#colors #carrot {
-  background-color: #e67e22;
-}
-#colors #pumpkin {
-  background-color: #d35400;
-}
-#colors #sunflower {
-  background-color: #f1c40f;
-}
-#colors #darksunflower {
-  background-color: #f39c12;
-}
-#colors #turquoise {
-  background-color: #1abc9c;
-}
-#colors #greensea {
-  background-color: #16a085;
-}
-#colors #emerald {
-  background-color: #2ecc71;
-}
-#colors #nephritis {
-  background-color: #27ae60;
-}
-#colors #peterriver {
-  background-color: #3498db;
-}
-#colors #belizehole {
-  background-color: #2980b9;
-}
-#colors #amethyst {
-  background-color: #9b59b6;
-}
-#colors #wisteria {
-  background-color: #8e44ad;
-}
-#colors #clouds {
-  background-color: #ecf0f1;
-}
-#colors #silver {
-  background-color: #bdc3c7;
-}
-#colors #concrete {
-  background-color: #95a5a6;
-}
-#colors #asbestos {
-  background-color: #7f8c8d;
-}
-#colors #wetasphault {
-  background-color: #34495e;
-}
-#colors #midnightblue {
-  background-color: #2c3e50;
->>>>>>> FETCH_HEAD
 }

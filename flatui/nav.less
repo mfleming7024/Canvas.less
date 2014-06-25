@@ -76,7 +76,9 @@
         height: 50px;
         display: none;
         a {
-            color: darken(@color, 20%);
+            //color: darken(@color, 20%);
+			//override color
+			color: white;
             float: left;
             text-decoration: none;
             width: 25px;
@@ -119,15 +121,10 @@
                 display: block;
                 .size(100%, 100%);
                 .transition(all, 0.3s);
-                &:hover {
-                    color: darken(@color, 10%);
-                    background-color: lighten(@color, 5%);
-                }
                 text-decoration: none;
                 color: white;
                 &.active {
-                    color: darken(@color, 15%);
-                    background-color: lighten(@color, 10%);
+                    color: darken(@color, 25%);
                 }
             }
         }
@@ -139,22 +136,9 @@ nav.regular {
     .nav-bar();
 }
 
-nav.green {
-    .nav-bar(@green);
-}
-
-nav.red {
-    .nav-bar(@red);
-}
-
 nav.off-canvas {
     .off-canvas();
 }
-
-//Feel free to add your own colors!
-//.navbar-yourcolor {
-//    .nav_bar(@yourcolor);
-//}
 
 /* #Above 
 ================================================== */
@@ -232,7 +216,7 @@ nav.off-canvas {
                         display: block;
                     }
                     box-sizing: border-box;
-                    margin-left: 10px;
+					padding-left: 5px;
                     border-left: none;
                     border-bottom: 1px solid @darkgray;
                     text-align: left;
@@ -241,16 +225,6 @@ nav.off-canvas {
                     width: 100%;
                     &.nav-right {
                         text-align: left;
-                    }
-                    a {
-                        &:hover {
-                            background-color: inherit;
-                        }
-                        -o-transition-property: none !important;
-                        -moz-transition-property: none !important;
-                        -ms-transition-property: none !important;
-                        -webkit-transition-property: none !important;
-                        transition-property: none !important;
                     }
                 }
             }

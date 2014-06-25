@@ -23,3 +23,18 @@ $(".color-box").on("click", function(){
 	currentColor = newColor;
 	canvas.css({"border-color": currentColor});
 });
+
+//Navigation bar triggering?
+$("nav.responsive .hidden a#menu").on("click", function(e){
+    e.preventDefault();
+    
+    var that = $(this);
+    
+    var menu = that.parent().parent().find("ul");
+    
+    if (menu.css('display') == 'none'){
+        menu.css("display", "block");
+    } else {
+        menu.css("display", "none");
+    }
+})
