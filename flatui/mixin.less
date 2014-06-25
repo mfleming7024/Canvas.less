@@ -1,0 +1,145 @@
+/* #Basic Size
+================================================== */
+.size(@width; @height) {
+    width:  @width;
+    height: @height;
+}
+
+/* #Gradients
+================================================== */
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient( linear,left bottom,left top,color-stop(0, @start),color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,@start,@stop);
+  background: -moz-linear-gradient(center bottom,@start 0%,@stop 100%);
+  background: -o-linear-gradient(@stop,@start);
+  filter:     e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+/* #Border Radius
+================================================== */
+.border-radius (@radius: 5px) {
+	-webkit-border-radius:   @radius;
+	-moz-border-radius:      @radius;
+	border-radius:           @radius;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.border-top-radius(@radius) {
+    border-top-right-radius:    @radius;
+    border-top-left-radius:     @radius;
+}
+.border-right-radius(@radius) {
+    border-bottom-right-radius: @radius;
+    border-top-right-radius:    @radius;
+}
+.border-bottom-radius(@radius) {
+    border-bottom-right-radius: @radius;
+    border-bottom-left-radius:  @radius;
+}
+.border-left-radius(@radius) {
+    border-bottom-left-radius:  @radius;
+    border-top-left-radius:     @radius;
+}
+
+/* #Image Shapes
+================================================== */
+.img-circle {
+    .border-radius(100px);
+}
+
+.img-rounded {
+    .border-radius(10px);
+}
+
+.img-thumb {
+    padding: 3px;
+    border: 1px solid #bdc3c7;
+    .border-radius(4px);
+}
+
+/* #Box Shadow
+================================================== */
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @color: #333) {
+    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @color);
+    -moz-box-shadow:    @x @y @blur rgba(0, 0, 0, @color);
+    box-shadow:         @x @y @blur rgba(0, 0, 0, @color);
+}
+
+.reflect (@length: 50%, @opacity: 0.2){
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@length, transparent), to(rgba(255,255,255,@opacity)));
+}
+
+/* #Box Sizing
+================================================== */
+.box-sizing (@prop) {
+    -webkit-box-sizing: @prop;
+    -moz-box-sizing:    @prop;
+    box-sizing:         @prop;
+}
+
+/* #Animations
+================================================== */
+.transition (@prop: all, @time: 0.5s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    transition:         @prop @time @ease;
+}
+
+/* #Font Loading
+================================================== */
+.font-face (@name: Helvetca Neue, @url: "/assets/font/helvetica/helvetca-neue") {
+  @font-face {
+    font-family: %('%d', @name);
+    src: e(%("url('%d.eot?#') format('eot')", ~"@{url}")),
+         e(%("url('%d.woff') format('woff')", ~"@{url}")),
+         e(%("url('%d.ttf') format('truetype')", ~"@{url}"));
+  }
+<<<<<<< HEAD
+=======
+}
+
+/* #Buttons
+================================================== */
+.button(@color: @emerald) {
+    cursor: pointer;
+    border: 0;
+    background-color: @color;
+    color: lighten(@color, 60%);
+    .transition(all, 0.3s);
+    &:hover {
+        background-color: lighten(@color, 10%);
+    }
+}
+.tiny_button(@color: @emerald) {
+    .button(@color);
+    .border-radius(3px);
+    padding: 6px;
+    font-size: 12px;
+    line-height: 1.083;
+}
+.small_button(@color: @emerald) {
+    .button(@color);
+    .border-radius(4px);
+    padding: 9px;
+    font-size: 13px;
+    line-height: 1.385;
+}
+.medium_button(@color: @emerald) {
+    .button(@color);
+    .border-radius(6px);
+    padding: 10px;
+    font-size: 17px;
+    line-height: 1.471;
+}
+.large_button(@color: @emerald) {
+    .button(@color);
+    .border-radius(6px);
+    padding: 13px;
+    font-size: 22px;
+    line-height: 1.227;
+>>>>>>> FETCH_HEAD
+}
