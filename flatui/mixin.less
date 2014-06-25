@@ -98,48 +98,4 @@
          e(%("url('%d.woff') format('woff')", ~"@{url}")),
          e(%("url('%d.ttf') format('truetype')", ~"@{url}"));
   }
-<<<<<<< HEAD
-=======
-}
-
-/* #Buttons
-================================================== */
-.button(@color: @emerald) {
-    cursor: pointer;
-    border: 0;
-    background-color: @color;
-    color: lighten(@color, 60%);
-    .transition(all, 0.3s);
-    &:hover {
-        background-color: lighten(@color, 10%);
-    }
-}
-.tiny_button(@color: @emerald) {
-    .button(@color);
-    .border-radius(3px);
-    padding: 6px;
-    font-size: 12px;
-    line-height: 1.083;
-}
-.small_button(@color: @emerald) {
-    .button(@color);
-    .border-radius(4px);
-    padding: 9px;
-    font-size: 13px;
-    line-height: 1.385;
-}
-.medium_button(@color: @emerald) {
-    .button(@color);
-    .border-radius(6px);
-    padding: 10px;
-    font-size: 17px;
-    line-height: 1.471;
-}
-.large_button(@color: @emerald) {
-    .button(@color);
-    .border-radius(6px);
-    padding: 13px;
-    font-size: 22px;
-    line-height: 1.227;
->>>>>>> FETCH_HEAD
 }

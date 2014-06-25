@@ -3,7 +3,6 @@
 
 /* #Input Fields
 ================================================== */
-<<<<<<< HEAD
 .text-input(@color: @gray) {
     border: 1px solid lighten(@color, 15%);
     .border-radius(4px);
@@ -12,16 +11,6 @@
     line-height: 1.867;
     padding: 5px 12px 0;
     height: 32px;
-=======
-.text_input(@color: @concrete) {
-    border: 1px solid lighten(@color, 15%);
-    .border-radius(4px);
-    color: lighten(@color, 10%);
-    font: 15px "Myriad Pro";
-    line-height: 1.867;
-    padding: 14px 12px;
-    height: 33px;
->>>>>>> FETCH_HEAD
     -webkit-appearance: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -34,19 +23,11 @@
 
 /* #Radio Buttons
 ================================================== */
-<<<<<<< HEAD
 .radio-button(@color: @blue) {
     label {
         float: left;
         text-align: right;
         min-width: 90px;
-=======
-.radio_button(@color: @peterriver) {
-    label {
-        float: left;
-        text-align: right;
-        width: 90px;
->>>>>>> FETCH_HEAD
         margin: 3px 7px 3px 0;
     }
     input {
@@ -54,16 +35,10 @@
         -webkit-appearance: none;
         cursor: pointer;
         float: left;
-<<<<<<< HEAD
         padding: 1px;
         .size(22px, 22px);
         .border-radius(15px);
         border: 2px solid @color;
-=======
-        .size(22px, 22px);
-        .border-radius(15px);
-        border: 3px solid @color;
->>>>>>> FETCH_HEAD
         background-color: lighten(@color, 10%);
         &:before {
             content: url("flatui/images/radio.png");   
@@ -81,7 +56,6 @@
 }
 
 
-<<<<<<< HEAD
 /* #Checkboxes
 ================================================== */
 .checkbox(@color: @blue) {
@@ -89,14 +63,6 @@
         float: left;
         text-align: right;
         min-width: 90px;
-=======
-/* #Checkbox
-================================================== */
-.checkbox(@color: @peterriver) {
-    cursor: pointer;
-    label {
-        float: left;
->>>>>>> FETCH_HEAD
         margin: 3px 7px 3px 0;
     }
     input {
@@ -166,7 +132,6 @@
     }
 }
 
-<<<<<<< HEAD
 /* #Buttons
 ================================================== */
 .button(@color: @green) {
@@ -216,46 +181,3 @@ div.checkbox-green      {.checkbox(@green);         }
 div.checkbox-yellow     {.checkbox(@yellow);        }
 div.checkbox-orange     {.checkbox(@orange);        }
 div.checkbox-purple     {.checkbox(@purple);        }
-=======
-
-//On the fly styles for all above styles
-
-//Text Inputs
-input.regular           {.text_input(@asbestos);     }
-input.error             {.text_input(@alizarin);     }
-input.success           {.text_input(@emerald);      }
-
-//Number Inputs
-div.number_input        {.numInput();                }
-
-//Regular Buttons
-button.tiny_reg         {.tiny_button();             }
-button.small_reg        {.small_button();            }
-button.medium_reg       {.medium_button();           }
-button.large_reg        {.large_button();            }
-
-//Error Buttons
-button.tiny_err         {.tiny_button(@alizarin);    }
-button.small_err        {.small_button(@alizarin);   }
-button.medium_err       {.medium_button(@alizarin);  }
-button.large_err        {.large_button(@alizarin);   }
-
-//Attention Buttons
-button.tiny_att         {.tiny_button(@sunflower);   }
-button.small_att        {.small_button(@sunflower);  }
-button.medium_att       {.medium_button(@sunflower); }
-button.large_att        {.large_button(@sunflower);  }
-
-//Radio Buttons
-div.radio_button_blue   {.radio_button();            }
-div.radio_button_red    {.radio_button(@alizarin);   }
-div.radio_button_green  {.radio_button(@emerald);    }
-
-//Checkboxes
-div.checkbox_blue       {.checkbox();                }
-div.checkbox_red        {.checkbox(@alizarin);       }
-div.checkbox_green      {.checkbox(@emerald);        }
-div.checkbox_yellow     {.checkbox(@sunflower);      }
-div.checkbox_orange     {.checkbox(@carrot);         }
-div.checkbox_purple     {.checkbox(@amethyst);       }
->>>>>>> FETCH_HEAD
