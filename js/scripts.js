@@ -7,30 +7,50 @@ function init() {
 	//set up touch events
 	canvas.on('touchstart', function(e) {
 		e.preventDefault();
-		console.log("touch started");
-		currentColor = "#00ff00";
-		canvas.css({"border-color": currentColor});
 	});
 	
 	canvas.on('touchmove', function(e) {
-//		randColor = 'rgb('
-//			+ (Math.floor(Math.random() * 256)) + ','
-//			+ (Math.floor(Math.random() * 256)) + ','
-//			+ (Math.floor(Math.random() * 256)) + ')';
 		e.preventDefault();
-		ctx.beginPath();
-		ctx.moveTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-        ctx.lineTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-		ctx.closePath();
-		ctx.strokeStyle = currentColor;
-		ctx.stroke();
+		touchMoved(e);
 	});
+	
+	
+	var touchMoved = function (event) {
+		var touches = event.changedTouches;
+
+		for (var i=0; i < touches.length; i++) {
+			var touch = touches[i];
+			var currentTouchIndex = findCurrentTouchIndex(touch.identifier);
+
+			if (currentTouchIndex >= 0) {
+				var currentTouch = currentTouches[currentTouchIndex];
+
+				ctx.beginPath();
+				ctx.moveTo(currentTouch.pageX, currentTouch.pageY);
+				ctx.lineTo(touch.pageX, touch.pageY);
+				ctx.lineWidth = currentWidth;
+				ctx.strokeStyle = currentTouch.color;
+				ctx.stroke();
+
+				// Update the touch record.
+				currentTouch.pageX = touch.pageX;
+				currentTouch.pageY = touch.pageY;
+
+				// Store the record.
+				currentTouches.splice(currentTouchIndex, 1, currentTouch);
+			} else {
+				console.log('Touch was not found!');
+			}
+
+		}
+	};
+	
 	
 	
 	//draw instructions on screen
 	ctx.beginPath();
-	ctx.moveTo(10,10);
-    ctx.lineTo(10, 70);
+	ctx.moveTo(11,10);
+    ctx.lineTo(10.5, 70);
     ctx.closePath();
     ctx.strokeStyle = currentColor;
     ctx.stroke();
