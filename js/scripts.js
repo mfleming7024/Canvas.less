@@ -35,21 +35,30 @@ function init() {
 		currentTouch = event.originalEvent.changedTouches[0];
 		ctx.lineTo(currentTouch.pageX, currentTouch.pageY-110);
 		ctx.lineWidth = currentWidth;
+		ctx.lineCap = "round";
 		ctx.strokeStyle = currentColor;
 		ctx.stroke();
 	};
-	
-	
 	
 	//draw instructions on screen
 	ctx.beginPath();
 	ctx.moveTo(10,10);
     ctx.lineTo(10,70);
 	ctx.moveTo(10,10);
-	ctx.lineTo(20,10);
+	ctx.lineTo(40,10);
+	ctx.moveTo(40,10);
+	ctx.lineTo(40,70);
+	ctx.moveTo(40,70);
+	ctx.lineTo(10,70);
     ctx.closePath();
     ctx.strokeStyle = currentColor;
     ctx.stroke();
+	
+	//set up clear button
+	$("#clearCanvas").on("click", function(){
+		console.log("hi");
+		ctx.clearRect(0, 0, canvas.width(), canvas.height());
+	});
 }
 
 
