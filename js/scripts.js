@@ -3,23 +3,39 @@ var currentColor = "#000000";
 var randColor;
 var ctx = document.getElementById("paint-area").getContext('2d');
 
-canvas.on('touchstart', function(e) {
-    e.preventDefault();
-	console.log("touch started");
-	currentColor = "#00ff00";
-	canvas.css({"border-color": currentColor});
-});
+function init() {
+	//set up touch events
+	canvas.on('touchstart', function(e) {
+		e.preventDefault();
+		console.log("touch started");
+		currentColor = "#00ff00";
+		canvas.css({"border-color": currentColor});
+	});
+	
+	canvas.on('touchmove', function(e) {
+//		randColor = 'rgb('
+//			+ (Math.floor(Math.random() * 256)) + ','
+//			+ (Math.floor(Math.random() * 256)) + ','
+//			+ (Math.floor(Math.random() * 256)) + ')';
+		e.preventDefault();
+		ctx.beginPath();
+		ctx.moveTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+        ctx.lineTo(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+		ctx.closePath();
+		ctx.strokeStyle = currentColor;
+		ctx.stroke();
+	});
+	
+	
+	//draw instructions on screen
+	ctx.beginPath();
+	ctx.moveTo(10,10);
+    ctx.lineTo(10, 70);
+    ctx.closePath();
+    ctx.strokeStyle = currentColor;
+    ctx.stroke();
+}
 
-canvas.on('touchmove', function(e) {
-	randColor = 'rgb('
-		+ (Math.floor(Math.random() * 256)) + ','
-		+ (Math.floor(Math.random() * 256)) + ','
-		+ (Math.floor(Math.random() * 256)) + ')';
-    e.preventDefault();
-	console.log("touch moved");
-	currentColor = "#ff0000";
-	canvas.css({"border-color": randColor});
-});
 
 //Color changing
 var newColor;
@@ -43,3 +59,5 @@ $("nav.responsive .hidden a#menu").on("click", function(e){
         menu.css("display", "none");
     }
 })
+
+init();
