@@ -1,9 +1,14 @@
 var canvas = $("canvas");
+var canvasSizeRef = document.getElementById("paint-area");
 var currentColor = "#000000";
-var currentWidth = 4;
+var currentWidth = 2;
 var randColor;
 var ctx = document.getElementById("paint-area").getContext('2d');
-console.log(canvas);
+
+//setting canvas width and height in js
+canvasSizeRef.width = window.innerWidth;
+canvasSizeRef.height = window.innerWidth;
+
 function init() {
 	//set up touch events
 	var newTouch;
@@ -11,7 +16,7 @@ function init() {
 		e.preventDefault();
 		newTouch = e.originalEvent.changedTouches[0];
 		ctx.beginPath();
-		ctx.moveTo(newTouch.pageX, newTouch.pageY-150);
+		ctx.moveTo(newTouch.pageX, newTouch.pageY-110);
 	});
 	
 	canvas.on('touchmove', function(e) {
@@ -22,7 +27,7 @@ function init() {
 	var currentTouch;
 	var touchMoved = function (event) {
 		currentTouch = event.originalEvent.changedTouches[0];
-		ctx.lineTo(currentTouch.pageX, currentTouch.pageY-150);
+		ctx.lineTo(currentTouch.pageX, currentTouch.pageY-110);
 		ctx.lineWidth = currentWidth;
 		ctx.strokeStyle = currentColor;
 		ctx.stroke();
