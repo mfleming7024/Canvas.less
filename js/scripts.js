@@ -6,8 +6,14 @@ var randColor;
 var ctx = document.getElementById("paint-area").getContext('2d');
 
 //setting canvas width and height in js
-canvasSizeRef.width = window.innerWidth;
-canvasSizeRef.height = window.innerWidth;
+if (window.innerWidth >= 960) {
+	canvasSizeRef.width = 940;
+	canvasSizeRef.height = 940;
+} else {
+	canvasSizeRef.width = window.innerWidth;
+	canvasSizeRef.height = window.innerWidth;
+}
+
 
 function init() {
 	//set up touch events
@@ -36,12 +42,14 @@ function init() {
 	
 	
 	//draw instructions on screen
-//	ctx.beginPath();
-//	ctx.moveTo(11,10);
-//    ctx.lineTo(10.5, 70);
-//    ctx.closePath();
-//    ctx.strokeStyle = currentColor;
-//    ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(10,10);
+    ctx.lineTo(10,70);
+	ctx.moveTo(10,10);
+	ctx.lineTo(20,10);
+    ctx.closePath();
+    ctx.strokeStyle = currentColor;
+    ctx.stroke();
 }
 
 
