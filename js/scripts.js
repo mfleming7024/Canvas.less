@@ -17,9 +17,11 @@ if (window.innerWidth >= 960) {
 
 function init() {
 	//if function to check for mobile or desktop and set up corresponding events
+	/**/
 	
 	//set up touch events
 	var newTouch;
+	var currentTouch;
 	canvas.on('touchstart', function(e) {
 		e.preventDefault();
 		newTouch = e.originalEvent.changedTouches[0];
@@ -32,7 +34,6 @@ function init() {
 		touchMoved(e);
 	});
 	
-	var currentTouch;
 	var touchMoved = function (event) {
 		currentTouch = event.originalEvent.changedTouches[0];
 		ctx.lineTo(currentTouch.pageX, currentTouch.pageY-110);
@@ -41,25 +42,16 @@ function init() {
 		ctx.strokeStyle = currentColor;
 		ctx.stroke();
 	};
-	
-	//draw instructions on screen
-	ctx.beginPath();
-	ctx.moveTo(10,10);
-    ctx.lineTo(10,70);
-	ctx.moveTo(10,10);
-	ctx.lineTo(40,10);
-	ctx.moveTo(40,10);
-	ctx.lineTo(40,70);
-	ctx.moveTo(40,70);
-	ctx.lineTo(10,70);
-    ctx.closePath();
-    ctx.strokeStyle = currentColor;
-    ctx.stroke();
 }
 
 //set up clear button
 $("#clearCanvas").on("click", function(){
 	ctx.clearRect(0, 0, canvas.width(), canvas.height());
+});
+
+//set up eraser button
+$("#eraser").on("click", function(){
+	currentColor = "#ffffff";
 });
 
 //Color changing
