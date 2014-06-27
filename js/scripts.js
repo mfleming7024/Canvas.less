@@ -1,7 +1,7 @@
 var canvas = $("canvas");
 var canvasSizeRef = document.getElementById("paint-area");
 var currentColor = "#000000";
-var currentWidth = 2;
+var currentWidth = 5;
 var randColor;
 var ctx = document.getElementById("paint-area").getContext('2d');
 
@@ -16,6 +16,8 @@ if (window.innerWidth >= 960) {
 
 
 function init() {
+	//if function to check for mobile or desktop and set up corresponding events
+	
 	//set up touch events
 	var newTouch;
 	canvas.on('touchstart', function(e) {
@@ -53,14 +55,12 @@ function init() {
     ctx.closePath();
     ctx.strokeStyle = currentColor;
     ctx.stroke();
-	
-	//set up clear button
-	$("#clearCanvas").on("click", function(){
-		console.log("hi");
-		ctx.clearRect(0, 0, canvas.width(), canvas.height());
-	});
 }
 
+//set up clear button
+$("#clearCanvas").on("click", function(){
+	ctx.clearRect(0, 0, canvas.width(), canvas.height());
+});
 
 //Color changing
 var newColor;
@@ -69,6 +69,30 @@ $(".color-box").on("click", function(){
 	currentColor = newColor;
 	canvas.css({"border-color": currentColor});
 });
+
+var brushSizeIndicator = $("#brushSize");
+//Brush Size changing
+$("#decreaseSize").on("click", function() {
+	if (currentWidth > 1) {
+		currentWidth--;
+		console.log("size decreased", currentWidth);
+		brushSizeIndicator.css("font-size", currentWidth);
+	} else {
+		//animate circle
+	}
+});
+
+//Brush Size changing
+$("#increaseSize").on("click", function() {
+	if (currentWidth < 25) {
+		currentWidth++;
+		console.log("size increased", currentWidth);
+		brushSizeIndicator.css("font-size", currentWidth);
+	} else {
+		//animate circle
+	}
+});
+
 
 //Navigation bar triggering?
 $("nav.responsive .hidden a#menu").on("click", function(e){
@@ -83,6 +107,6 @@ $("nav.responsive .hidden a#menu").on("click", function(e){
     } else {
         menu.css("display", "none");
     }
-})
+});
 
 init();
