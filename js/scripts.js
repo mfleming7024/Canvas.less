@@ -1,5 +1,6 @@
 var canvas = $("canvas");
 var canvasSizeRef = document.getElementById("paint-area");
+var currentTool = "Paintbrush";
 var currentColor = "#000000";
 var currentWidth = 5;
 var randColor;
@@ -40,8 +41,25 @@ function init() {
 		ctx.lineWidth = currentWidth;
 		ctx.lineCap = "round";
 		ctx.lineJoin = "round";
-		ctx.strokeStyle = currentColor;
-		ctx.stroke();
+		if (currentTool == "Eraser") {
+			ctx.strokeStyle = "#ffffff";
+			ctx.stroke();
+		} else if (currentTool == "Paintbrush") {
+			ctx.strokeStyle = currentColor;
+			ctx.stroke();
+		} else if (currentTool == "Confetti") {
+			for (var i = 0;i<4;i++){
+				//random color generator
+				ctx.lineTo(currentTouch.pageX*Math.random()*5, (currentTouch.pageY-110)*Math.random*5);
+				randColor = 'rgb('
+					+ (Math.floor(Math.random() * 256)) + ','
+					+ (Math.floor(Math.random() * 256)) + ','
+					+ (Math.floor(Math.random() * 256)) + ')';
+				ctx.strokeStyle = randColor;
+				ctx.stroke();
+			}
+		}
+		
 	};
 }
 
@@ -52,7 +70,16 @@ $("#clearCanvas").on("click", function(){
 
 //set up eraser button
 $("#eraser").on("click", function(){
-	currentColor = "#ffffff";
+	currentTool = "Eraser";
+	$(".active").toggleClass("active");
+	$(this).toggleClass("active");
+});
+
+//set up paintbrush button
+$("#paintbrush").on("click", function(){
+	currentTool = "Paintbrush";
+	$(".active").toggleClass("active");
+	$(this).toggleClass("active");
 });
 
 //Color changing
@@ -74,7 +101,7 @@ $("#decreaseSize").on("click", function() {
 
 //Brush Size changing
 $("#increaseSize").on("click", function() {
-	if (currentWidth < 25) {
+	if (currentWidth < 32) {
 		currentWidth++;
 		brushSizeIndicator.html(currentWidth);
 	}
