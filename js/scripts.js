@@ -50,6 +50,7 @@ function init() {
 		} else if (currentTool == "Confetti") {
 			for (var i = 0;i<4;i++){
 				//random color generator
+				ctx.beginPath();
 				ctx.lineTo(currentTouch.pageX*Math.random()*5, (currentTouch.pageY-110)*Math.random*5);
 				randColor = 'rgb('
 					+ (Math.floor(Math.random() * 256)) + ','
