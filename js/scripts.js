@@ -82,6 +82,13 @@ $("#paintbrush").on("click", function(){
 	$(this).toggleClass("active");
 });
 
+//set up paintbrush button
+$("#confetti").on("click", function(){
+	currentTool = "Confetti";
+	$(".active").toggleClass("active");
+	$(this).toggleClass("active");
+});
+
 //Color changing
 var newColor;
 $(".color-box").on("click", function(){
