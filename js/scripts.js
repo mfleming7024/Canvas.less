@@ -39,6 +39,7 @@ function init() {
 		ctx.lineTo(currentTouch.pageX, currentTouch.pageY-110);
 		ctx.lineWidth = currentWidth;
 		ctx.lineCap = "round";
+		ctx.lineJoin = "round";
 		ctx.strokeStyle = currentColor;
 		ctx.stroke();
 	};
@@ -67,10 +68,7 @@ var brushSizeIndicator = $("#brushSize");
 $("#decreaseSize").on("click", function() {
 	if (currentWidth > 1) {
 		currentWidth--;
-		console.log("size decreased", currentWidth);
-		brushSizeIndicator.css("font-size", currentWidth);
-	} else {
-		//animate circle
+		brushSizeIndicator.html(currentWidth);
 	}
 });
 
@@ -78,10 +76,7 @@ $("#decreaseSize").on("click", function() {
 $("#increaseSize").on("click", function() {
 	if (currentWidth < 25) {
 		currentWidth++;
-		console.log("size increased", currentWidth);
-		brushSizeIndicator.css("font-size", currentWidth);
-	} else {
-		//animate circle
+		brushSizeIndicator.html(currentWidth);
 	}
 });
 
