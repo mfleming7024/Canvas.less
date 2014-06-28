@@ -43,24 +43,16 @@ function init() {
 		ctx.lineJoin = "round";
 		if (currentTool == "Eraser") {
 			ctx.strokeStyle = "#ffffff";
-			ctx.stroke();
 		} else if (currentTool == "Paintbrush") {
 			ctx.strokeStyle = currentColor;
-			ctx.stroke();
 		} else if (currentTool == "Confetti") {
-			for (var i = 0;i<4;i++){
-				//random color generator
-				ctx.beginPath();
-				ctx.lineTo(currentTouch.pageX*Math.random()*5, (currentTouch.pageY-110)*Math.random*5);
-				randColor = 'rgb('
-					+ (Math.floor(Math.random() * 256)) + ','
-					+ (Math.floor(Math.random() * 256)) + ','
-					+ (Math.floor(Math.random() * 256)) + ')';
-				ctx.strokeStyle = randColor;
-				ctx.stroke();
-			}
+			randColor = 'rgb('
+				+ (Math.floor(Math.random() * 256)) + ','
+				+ (Math.floor(Math.random() * 256)) + ','
+				+ (Math.floor(Math.random() * 256)) + ')';
+			ctx.strokeStyle = randColor;
 		}
-		
+		ctx.stroke();
 	};
 }
 
@@ -95,7 +87,10 @@ var newColor;
 $(".color-box").on("click", function(){
 	newColor = $(this).attr("data-hex");
 	currentColor = newColor;
+	currentTool = "Paintbrush";
 	canvas.css({"border-color": currentColor});
+	$(".active").toggleClass("active");
+	$("#paintbrush").toggleClass("active");
 });
 
 var brushSizeIndicator = $("#brushSize");
