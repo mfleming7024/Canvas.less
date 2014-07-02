@@ -1,25 +1,34 @@
 $(document).ready(function(e){
 	
 	var win = $(window);
-	var canvas = $("canvas");
-	var canvasSizeRef = document.getElementById("paint-area");
+	var canvas = $("#paint-area");
+	var canvasRef = document.getElementById("paint-area");
 	var currentTool = "Paintbrush";
 	var currentColor = "#000000";
 	var currentWidth = 5;
 	var randColor;
-	var ctx = document.getElementById("paint-area").getContext('2d');
+	var ctx = canvasRef.getContext('2d');
 	
 	win.on("orientationchange", function(){
 		alert("orientation change");
 	});
 
 	var container = canvas.parent();
-	win.resize(respondCanvas); 
+	var contWidth;
 	var offsetLft;
+	var offsetTop = canvas[0].offsetTop;
+	var buffer = document.getElementById('buffer');
+	
+	win.resize(respondCanvas); 
 	function respondCanvas(){ 
-		offsetLft = (win.width()-canvas.parent().width())/2;
-		canvas.attr('width', container.width());
-		canvas.attr('height', container.width());
+		offsetLft = (win.width() - container.width()) / 2;
+		contWidth = container.width();
+		buffer.width = contWidth;
+		buffer.height = contWidth;
+		buffer.getContext('2d').drawImage(canvasRef, 0, 0);
+		canvas.attr('width', contWidth);
+		canvas.attr('height',contWidth);
+		canvasRef.getContext('2d').drawImage(buffer, 0, 0);
 	}
 	respondCanvas();
 
@@ -35,7 +44,7 @@ $(document).ready(function(e){
 			e.preventDefault();
 			newTouch = e.originalEvent.changedTouches[0];
 			ctx.beginPath();
-			ctx.moveTo(newTouch.pageX - offsetLft, newTouch.pageY);
+			ctx.moveTo(newTouch.pageX-offsetLft,newTouch.pageY-offsetTop);
 		});
 
 		canvas.on('touchmove', function(e) {
@@ -45,10 +54,10 @@ $(document).ready(function(e){
 
 		var touchMoved = function (event) {
 			currentTouch = event.originalEvent.changedTouches[0];
-			ctx.lineTo(currentTouch.pageX - offsetLft, currentTouch.pageY - );
+			ctx.lineTo(currentTouch.pageX-offsetLft,currentTouch.pageY-offsetTop);
 			ctx.lineWidth = currentWidth;
-			ctx.lineCap = "round";
-			ctx.lineJoin = "round";
+			ctx.lineCap = 	"round";
+			ctx.lineJoin = 	"round";
 			if (currentTool == "Eraser") {
 				ctx.strokeStyle = "#ffffff";
 			} else if (currentTool == "Paintbrush") {
@@ -64,10 +73,12 @@ $(document).ready(function(e){
 			ctx.stroke();
 		};
 	}
-
-	//set up clear button
-	$("#clearCanvas").on("click", function(){
-		ctx.clearRect(0, 0, canvas.width(), canvas.height());
+	
+	//set up paintbrush button
+	$("#paintbrush").on("click", function(){
+		currentTool = "Paintbrush";
+		$(".active").toggleClass("active");
+		$(this).toggleClass("active");
 	});
 
 	//set up eraser button
@@ -78,17 +89,15 @@ $(document).ready(function(e){
 	});
 
 	//set up paintbrush button
-	$("#paintbrush").on("click", function(){
-		currentTool = "Paintbrush";
-		$(".active").toggleClass("active");
-		$(this).toggleClass("active");
-	});
-
-	//set up paintbrush button
 	$("#confetti").on("click", function(){
 		currentTool = "Confetti";
 		$(".active").toggleClass("active");
 		$(this).toggleClass("active");
+	});
+	
+	//set up clear button
+	$("#clearCanvas").on("click", function(){
+		ctx.clearRect(0, 0, canvas.width(), canvas.height());
 	});
 
 	//Color changing
