@@ -127,6 +127,23 @@ $(document).ready(function(e){
 			brushSizeIndicator.html(currentWidth);
 		}
 	});
+	
+	//Save Picture Functionality
+	$("#savePicture").on("click", function(){
+		var data = canvasRef.toDataURL();
+		var prev = window.location.href;
+		window.location.href = data.replace("image/png", "image/octet-stream");
+		window.location.href = prev;
+	})
 
 	init();
 });
+
+
+
+
+
+
+
+
+
