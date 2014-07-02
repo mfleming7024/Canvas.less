@@ -1,5 +1,6 @@
 $(document).ready(function(e){
 	
+	var win = $(window);
 	var canvas = $("canvas");
 	var canvasSizeRef = document.getElementById("paint-area");
 	var currentTool = "Paintbrush";
@@ -7,19 +8,16 @@ $(document).ready(function(e){
 	var currentWidth = 5;
 	var randColor;
 	var ctx = document.getElementById("paint-area").getContext('2d');
-
-	//setting canvas width and height in js
-	if (window.innerWidth >= 960) {
-		canvasSizeRef.width = 940;
-		canvasSizeRef.height = 940;
-	} else {
-		canvasSizeRef.width = window.innerWidth;
-		canvasSizeRef.height = window.innerWidth;
-	}
+	
+	win.on("orientationchange", function(){
+		alert("orientation change");
+	});
 
 	var container = canvas.parent();
-	$(window).resize(respondCanvas); 
+	win.resize(respondCanvas); 
+	var offsetLft;
 	function respondCanvas(){ 
+		offsetLft = (win.width()-canvas.parent().width())/2;
 		canvas.attr('width', container.width());
 		canvas.attr('height', container.width());
 	}
@@ -37,7 +35,7 @@ $(document).ready(function(e){
 			e.preventDefault();
 			newTouch = e.originalEvent.changedTouches[0];
 			ctx.beginPath();
-			ctx.moveTo(newTouch.pageX, newTouch.pageY-110);
+			ctx.moveTo(newTouch.pageX - offsetLft, newTouch.pageY);
 		});
 
 		canvas.on('touchmove', function(e) {
@@ -47,7 +45,7 @@ $(document).ready(function(e){
 
 		var touchMoved = function (event) {
 			currentTouch = event.originalEvent.changedTouches[0];
-			ctx.lineTo(currentTouch.pageX, currentTouch.pageY-110);
+			ctx.lineTo(currentTouch.pageX - offsetLft, currentTouch.pageY - );
 			ctx.lineWidth = currentWidth;
 			ctx.lineCap = "round";
 			ctx.lineJoin = "round";
