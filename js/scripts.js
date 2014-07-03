@@ -8,11 +8,6 @@ $(document).ready(function(e){
 	var currentWidth = 5;
 	var randColor;
 	var ctx = canvasRef.getContext('2d');
-	
-	win.on("orientationchange", function(){
-		alert("orientation change");
-	});
-
 	var container = canvas.parent();
 	var contWidth;
 	var offsetLft;
@@ -132,8 +127,9 @@ $(document).ready(function(e){
 	$("#savePicture").on("click", function(){
 		var data = canvasRef.toDataURL();
 		var prev = window.location.href;
-		window.location.href = data.replace("image/png", "image/octet-stream");
-		window.location.href = prev;
+		window.location.href = data;
+		//data.replace("image/png", "image/octet-stream");
+		//window.location.href = prev;
 	})
 
 	init();
