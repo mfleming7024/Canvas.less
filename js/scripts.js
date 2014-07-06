@@ -32,46 +32,86 @@ $(document).ready(function(e){
 		//if function to check for mobile or desktop and set up corresponding events
 		/**/
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			alert("Your on mobile!!!");
+			//set up touch events
+			var newTouch;
+			var currentTouch;
+			canvas.on('touchstart', function(e) {
+				e.preventDefault();
+				newTouch = e.originalEvent.changedTouches[0];
+				ctx.beginPath();
+				ctx.moveTo(newTouch.pageX-offsetLft,newTouch.pageY-offsetTop);
+			});
+
+			canvas.on('touchmove', function(e) {
+				e.preventDefault();
+				touchMoved(e);
+			});
+
+			var touchMoved = function (event) {
+				currentTouch = event.originalEvent.changedTouches[0];
+				ctx.lineTo(currentTouch.pageX-offsetLft,currentTouch.pageY-offsetTop);
+				ctx.lineWidth = currentWidth;
+				ctx.lineCap = 	"round";
+				ctx.lineJoin = 	"round";
+				if (currentTool == "Eraser") {
+					ctx.strokeStyle = "#ffffff";
+				} else if (currentTool == "Paintbrush") {
+					ctx.strokeStyle = currentColor;
+				} else if (currentTool == "Confetti") {
+					randColor = 'rgb('
+						+ (Math.floor(Math.random() * 256)) + ','
+						+ (Math.floor(Math.random() * 256)) + ','
+						+ (Math.floor(Math.random() * 256)) + ')';
+					ctx.strokeStyle = randColor;
+				}
+				ctx.stroke();
+			};
+		} else {
+			//set up mouse events
+			var isDrawing = false;
+			var currentClick;
+			canvas.on('mousedown', function(e) {
+				e.preventDefault();
+				ctx.beginPath();
+				ctx.moveTo(e.pageX-offsetLft,e.pageY-offsetTop);
+				isDrawing = true;
+			});
+			
+			canvas.on("mouseup", function(e) {
+				isDrawing = false;
+			});
+
+			canvas.on('mousemove', function(e) {
+				e.preventDefault();
+				if (isDrawing) {
+					mouseMoved(e);
+				}
+			});
+
+			var mouseMoved = function (event) {
+				ctx.lineTo(event.pageX-offsetLft,event.pageY-offsetTop);
+				ctx.lineWidth = currentWidth;
+				ctx.lineCap = 	"round";
+				ctx.lineJoin = 	"round";
+				if (currentTool == "Eraser") {
+					ctx.strokeStyle = "#ffffff";
+				} else if (currentTool == "Paintbrush") {
+					ctx.strokeStyle = currentColor;
+				} else if (currentTool == "Confetti") {
+					randColor = 'rgb('
+						+ (Math.floor(Math.random() * 256)) + ','
+						+ (Math.floor(Math.random() * 256)) + ','
+						+ (Math.floor(Math.random() * 256)) + ')';
+					ctx.strokeStyle = randColor;
+				}
+				ctx.stroke();
+			};
 		}
 		
+		//set up canvas with white background
 		ctx.fillStyle = "#ffffff";
 		ctx.fillRect(0, 0, canvas.width(), canvas.height());
 
-		//set up touch events
-		var newTouch;
-		var currentTouch;
-		canvas.on('touchstart', function(e) {
-			e.preventDefault();
-			newTouch = e.originalEvent.changedTouches[0];
-			ctx.beginPath();
-			ctx.moveTo(newTouch.pageX-offsetLft,newTouch.pageY-offsetTop);
-		});
-
-		canvas.on('touchmove', function(e) {
-			e.preventDefault();
-			touchMoved(e);
-		});
-
-		var touchMoved = function (event) {
-			currentTouch = event.originalEvent.changedTouches[0];
-			ctx.lineTo(currentTouch.pageX-offsetLft,currentTouch.pageY-offsetTop);
-			ctx.lineWidth = currentWidth;
-			ctx.lineCap = 	"round";
-			ctx.lineJoin = 	"round";
-			if (currentTool == "Eraser") {
-				ctx.strokeStyle = "#ffffff";
-			} else if (currentTool == "Paintbrush") {
-				ctx.strokeStyle = currentColor;
-			} else if (currentTool == "Confetti") {
-				randColor = 'rgb('
-					+ (Math.floor(Math.random() * 256)) + ','
-					+ (Math.floor(Math.random() * 256)) + ','
-					+ (Math.floor(Math.random() * 256)) + ')';
-				ctx.strokeStyle = randColor;
-			}
-			ctx.stroke();
-		};
 	}
 	
 	//set up paintbrush button
