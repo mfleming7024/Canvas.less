@@ -31,6 +31,12 @@ $(document).ready(function(e){
 	function init() {
 		//if function to check for mobile or desktop and set up corresponding events
 		/**/
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			alert("Your on mobile!!!");
+		}
+		
+		ctx.fillStyle = "#ffffff";
+		ctx.fillRect(0, 0, canvas.width(), canvas.height());
 
 		//set up touch events
 		var newTouch;
@@ -91,7 +97,8 @@ $(document).ready(function(e){
 	
 	//set up clear button
 	$("#clearCanvas").on("click", function(){
-		ctx.clearRect(0, 0, canvas.width(), canvas.height());
+		ctx.fillStyle = "#ffffff";
+		ctx.fillRect(0, 0, canvas.width(), canvas.height());
 	});
 
 	//Color changing
