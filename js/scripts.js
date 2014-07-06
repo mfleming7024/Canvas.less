@@ -58,7 +58,6 @@ $(document).ready(function(e){
 			} else if (currentTool == "Paintbrush") {
 				ctx.strokeStyle = currentColor;
 			} else if (currentTool == "Confetti") {
-				//use dots instead?
 				randColor = 'rgb('
 					+ (Math.floor(Math.random() * 256)) + ','
 					+ (Math.floor(Math.random() * 256)) + ','
@@ -127,6 +126,7 @@ $(document).ready(function(e){
 	$("#savePicture").on("click", function(){
 		var data = canvasRef.toDataURL();
 		var prev = window.location.href;
+		data.replace("image/png", "image/octet-stream");
 		window.location.href = data;
 		//data.replace("image/png", "image/octet-stream");
 		//window.location.href = prev;
